@@ -1,12 +1,82 @@
-import React from 'react'
+// Home.js
+import React, { useState, useEffect } from 'react';
+import anime from 'animejs';
+import WaterDropGrid from './WaterDropGrid';
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { motion } from 'framer-motion';  
 import '../App.css';
 
-const Home = () => {
+const Home = ({ theme }) => {
+  const [emojiIndex, setEmojiIndex] = useState(0);
+  const emojis = ['👩‍💻', '💻', '📱', '🤍', '💫'];
+
+  useEffect(() => {
+    const textWrapperH1 = document.querySelector('.ml6 .letters');
+    const textWrapperH2 = document.querySelector('.ml7 .letters');
+
+    if (textWrapperH1) {
+      textWrapperH1.innerHTML = textWrapperH1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    }
+
+    if (textWrapperH2) {
+      textWrapperH2.innerHTML = textWrapperH2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    }
+
+    anime.timeline({ loop: false })
+      .add({
+        targets: '.ml6 .letter',
+        translateY: ["1.5em", 0],
+        translateZ: 0,
+        duration: 750,
+        delay: (el, i) => 20 * i
+      }).add({
+        targets: '.ml7 .letter',
+        translateY: ["1.5em", 0],
+        translateZ: 0,
+        duration: 750,
+        delay: (el, i) => 20 * i
+      });
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setEmojiIndex((prevIndex) => (prevIndex + 1) % emojis.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [emojis.length]);
+
   return (
-    <div className='home contenedor' id='home'>
-      <h1>Inicio</h1>
+    <div className={`home ${theme === 'dark' ? 'dark-mode' : ''}`} id='home'>
+      <WaterDropGrid />
+      <div className={`texto-inicio ${theme === 'dark' ? 'dark-mode' : ''}`}>
+        <h1 className="ml6">
+          <span className="text-wrapper">
+            <span className="letters">Hola, soy Ely! Diseñadora y desarrolladora web</span>
+          </span>
+        </h1>
+        <h2 className="ml7">
+          <span className="text-wrapper">
+            <span className="letters">Trabajemos juntos!</span>
+          </span>
+        </h2>
+        <button className={`wsp-me ${theme === 'dark' ? 'dark-mode' : ''}`}>Conversemos <AiOutlineWhatsApp /></button>
+      </div>
+      <motion.div
+        className={`animated-box ${theme === 'dark' ? 'dark-mode' : ''}`}
+        key={emojiIndex} 
+        initial={{ scale: 0 }}
+        animate={{ rotate: 360, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20
+        }}
+      >
+        {emojis[emojiIndex]}
+      </motion.div>
     </div>
-  )
+  );
 }
 
 export default Home;

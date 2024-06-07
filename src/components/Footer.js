@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = ({ theme }) => {
   return (
-    <div className='footer' id='footer'>
-      <h1>Footer</h1>
+    <div  className={`footer ${theme === 'dark' ? 'dark-mode' : ''}`} id='footer'>
+      <h3>Hecho con 🤍 por @Ely</h3>
     </div>
   )
 }
