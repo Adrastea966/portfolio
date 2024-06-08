@@ -24,18 +24,12 @@ const Home = ({ theme }) => {
 
     anime.timeline({ loop: false })
       .add({
-        targets: '.ml6 .letter',
+        targets: '.ml6 .letter, .ml7 .letter',
         translateY: ["1.5em", 0],
         translateZ: 0,
         duration: 750,
         delay: (el, i) => 20 * i
-      }).add({
-        targets: '.ml7 .letter',
-        translateY: ["1.5em", 0],
-        translateZ: 0,
-        duration: 750,
-        delay: (el, i) => 20 * i
-      });
+      })
   }, []);
 
   useEffect(() => {
@@ -60,7 +54,13 @@ const Home = ({ theme }) => {
             <span className="letters">Trabajemos juntos!</span>
           </span>
         </h2>
-        <button className={`wsp-me ${theme === 'dark' ? 'dark-mode' : ''}`}>Conversemos <AiOutlineWhatsApp /></button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="whitespace-nowrap rounded-lg bg-slate-600 px-10 py-2 font-medium text-white shadow-xl transition-colors hover:bg-slate-700 flex gap-2 items-center"
+        >
+          Conversemos <AiOutlineWhatsApp/>
+        </motion.button>
       </div>
       <motion.div
         className={`animated-box ${theme === 'dark' ? 'dark-mode' : ''}`}

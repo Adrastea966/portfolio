@@ -4,13 +4,13 @@ import '../App.css';
 
 const WaterDropGrid = () => {
   return (
-    <div className="relative grid place-content-center bg-slate-20 px-4 py-10">
+    <div className="relative flex justify-center bg-slate-20 px-10 py-10">
       <DotGrid />
     </div>
   );
 };
 
-const GRID_WIDTH = 42;
+const GRID_WIDTH = 30;
 const GRID_HEIGHT = 20;
 
 const DotGrid = () => {

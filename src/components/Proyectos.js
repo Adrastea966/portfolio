@@ -1,9 +1,10 @@
 import React from 'react'
+import BouncyCardsFeatures from './BouncyCardsFeatures'
 
 const Proyectos = () => {
   return (
     <div className='proyectos contenedor' id='proyectos'>
-      <h1>Proyectos</h1>
+      <BouncyCardsFeatures/>
     </div>
   )
 }
