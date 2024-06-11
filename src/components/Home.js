@@ -1,10 +1,30 @@
-// Home.js
 import React, { useState, useEffect } from 'react';
 import anime from 'animejs';
 import WaterDropGrid from './WaterDropGrid';
 import { AiOutlineWhatsApp } from "react-icons/ai";
-import { motion } from 'framer-motion';  
+import { AiOutlineInstagram, AiOutlineGithub, AiOutlineMail } from "react-icons/ai";
+import { motion } from 'framer-motion';
 import '../App.css';
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+}
 
 const Home = ({ theme }) => {
   const [emojiIndex, setEmojiIndex] = useState(0);
@@ -74,6 +94,34 @@ const Home = ({ theme }) => {
         }}
       >
         {emojis[emojiIndex]}
+      </motion.div>
+
+      <motion.div
+        className="social-icons-container"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div className="icon instagram bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <AiOutlineInstagram />
+          </a>
+        </motion.div>
+        <motion.div className="icon whatsapp bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+          <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+            <AiOutlineWhatsApp />
+          </a>
+        </motion.div>
+        <motion.div className="icon github bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+          <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+            <AiOutlineGithub />
+          </a>
+        </motion.div>
+        <motion.div className="icon email bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+          <a href="mailto:elianamaiu@yahoo.com.ar">
+            <AiOutlineMail />
+          </a>
+        </motion.div>
       </motion.div>
     </div>
   );
