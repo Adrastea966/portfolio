@@ -241,7 +241,7 @@ a {
     font-size: 0.8rem;
 }
 
-.dark-mode .card-top-items a .tooltip{
+.dark-mode .card-top-items a .tooltip {
     background-color: #94a3b8;
     color: #f8fafc;
 }
@@ -291,6 +291,76 @@ a {
     background-repeat: no-repeat;
     border: 1px solid #0f172a67;
 }
+
+/*Servicios*/
+.product-card {
+    justify-content: space-between;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.01);
+    background-color: #e2e8f0;
+}
+
+.dark-mode .product-card:hover {
+    background-color: #334155;
+}
+
+.product-card-top h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.btn-cambiar-plan {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: underline;
+}
+
+.btn-cambiar-plan svg {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-cambiar-plan:hover svg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.product-card-medium {
+    font-size: 0.8em;
+}
+
+.product-card-top h3 {
+    display: flex;
+    text-align: center;
+    max-width: 250px;
+    font-weight: 300;
+}
+
+.product-card-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2-descuento{
+    text-decoration: line-through;
+}
+
+.h3-descuento{
+    font-size: 1.6em;
+    display:flex;
+    gap:0.8rem;
+    align-items: center;
+    padding-right: 2rem;
+}
+
 
 /*Footer*/
 .footer {
