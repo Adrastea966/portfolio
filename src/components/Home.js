@@ -66,7 +66,7 @@ const Home = ({ theme }) => {
       <div className={`texto-inicio ${theme === 'dark' ? 'dark-mode' : ''}`}>
         <h1 className="ml6">
           <span className="text-wrapper">
-            <span className="letters">Hola, soy Ely! Diseñadora y desarrolladora web</span>
+            <span className="letters">De ideas a experiencias digitales. Diseño y desarrollo de sitios web</span>
           </span>
         </h1>
         <h2 className="ml7">
@@ -74,13 +74,16 @@ const Home = ({ theme }) => {
             <span className="letters">Trabajemos juntos!</span>
           </span>
         </h2>
-        <motion.button
+        <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="whitespace-nowrap rounded-lg bg-slate-600 px-10 py-2 font-medium text-white shadow-xl transition-colors hover:bg-slate-700 flex gap-2 items-center"
+          className="btn-home flex gap-2 items-center whitespace-nowrap rounded-lg bg-slate-600 px-10 py-2 font-medium text-white shadow-xl transition-colors hover:bg-slate-700"
+          href="https://wa.me/541135005100"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Conversemos <AiOutlineWhatsApp/>
-        </motion.button>
+        </motion.a>
       </div>
       <motion.div
         className={`animated-box ${theme === 'dark' ? 'dark-mode' : ''}`}

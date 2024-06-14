@@ -40,7 +40,7 @@ const BouncyCardsFeatures = () => {
   };
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-12 text-slate-600 dark:text-slate-400 flex flex-col">
+    <section className="mx-auto max-w-7xl px-4 py-12 text-slate-600 dark:text-slate-400 flex flex-col pb-5">
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
         <h1 className="ml11 max-w-lg text-3xl font-bold md:text-2xl">
           <span className="text-wrapper">
@@ -51,7 +51,7 @@ const BouncyCardsFeatures = () => {
       </div>
 
       <motion.div
-        className="mb-4 flex flex flex-wrap gap-4 justify-center"
+        className="mb-4 flex flex flex-wrap gap-10 justify-center"
         variants={containerVariants}
         initial="initial"
         animate="animate"

@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import anime from 'animejs';
 import { twMerge } from "tailwind-merge";
-import { FiArrowRight, FiFramer } from "react-icons/fi";
+import { FiFramer } from "react-icons/fi";
+import { IoMdDownload } from "react-icons/io";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { TbBrandCss3 } from "react-icons/tb";
 import { GrReactjs } from "react-icons/gr";
@@ -107,7 +108,7 @@ const HeaderBlock = () => (
             </span>
         </h1>
 
-        <button className="btn-arrow">Contactemos <FiArrowRight/> </button>
+        <button className="btn-cv"><a href="CV.pdf" download>Descargar cv</a><IoMdDownload /></button>
     </Block>
 );
 
@@ -124,99 +125,99 @@ const SocialsBlock = () => (
         <div className="grid grid-cols-3 gap-2 ">
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     HTML5 <AiOutlineHtml5 />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     CSS3 <TbBrandCss3 />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     JavaScript <IoLogoJavascript />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     ReactJS <GrReactjs />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     Framer<FiFramer />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     TailwindCSS <BiLogoTailwindCss />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     Figma <FaFigma />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     Boostrap <RiBootstrapLine />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-400 col-span-1 h-8 p-1"
+                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
                 >
                     AnimeJS
                 </a>

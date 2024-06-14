@@ -123,7 +123,7 @@ const Contacto = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     onKeyDown={handleDescriptionSubmit}
-                    placeholder=''
+                    placeholder='tu mensaje'
                   />
                 </div>
               </div>
@@ -138,7 +138,7 @@ const Contacto = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     onKeyDown={handleNameSubmit}
-                    placeholder=''
+                    placeholder='tu nombre'
                   />
                 </div>
               </div>
@@ -153,7 +153,7 @@ const Contacto = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     onKeyDown={handleEmailSubmit}
-                    placeholder=''
+                    placeholder='tu email'
                   />
                 </div>
               </div>

@@ -4,7 +4,7 @@ import '../App.css';
 
 const WaterDropGrid = () => {
   return (
-    <div className="relative flex justify-center bg-slate-20 px-10 py-10">
+    <div className="relative flex justify-center bg-slate-20 p-10">
       <DotGrid />
     </div>
   );
