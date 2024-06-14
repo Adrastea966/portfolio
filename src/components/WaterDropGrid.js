@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import anime from 'animejs';
-import '../App.css';  
+import '../App.css';
+
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowSize;
+};
 
 const WaterDropGrid = () => {
   return (
@@ -10,10 +31,13 @@ const WaterDropGrid = () => {
   );
 };
 
-const GRID_WIDTH = 30;
-const GRID_HEIGHT = 20;
-
 const DotGrid = () => {
+  const { width } = useWindowSize();
+
+  // Ajustar dimensiones de la grilla según el tamaño de la pantalla
+  const GRID_WIDTH = width <= 580 ? 10 : width <= 800 ? 15 : 30;
+  const GRID_HEIGHT = 20;
+
   const handleDotClick = (e) => {
     anime({
       targets: ".dot-point",
@@ -61,7 +85,9 @@ const DotGrid = () => {
     <div
       onClick={handleDotClick}
       style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
-      className="grid w-fit"
+      className={`grid w-fit ${
+        width <= 580 ? 'ml-10' : width <= 800 ? 'ml-10' : ''
+      }`}
     >
       {dots}
     </div>

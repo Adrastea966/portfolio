@@ -57,7 +57,6 @@ a {
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 2px 2px 10px #00000018;
 }
 
 .navbar.flex-col {
@@ -94,6 +93,7 @@ a {
     min-height: 84vh;
     position: relative;
     background-color: #f8fafc;
+    overflow-x: none;
 }
 
 .social-icons-container {
@@ -135,12 +135,12 @@ a {
 }
 
 .texto-inicio {
-    width: 70%;
+    width: 55rem;
     padding: 5rem;
     color: #94a3b8;
     position: absolute;
     top: 55%;
-    left: 37%;
+    left: 28rem;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
@@ -213,7 +213,7 @@ a {
     justify-content: center;
     margin-top: 20px;
     position: absolute;
-    top: 15px;
+    top: 55px;
     left: 95px;
     font-size: 3em;
 }
@@ -223,13 +223,42 @@ a {
     box-shadow: -2px 2px 10px #18212f;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     .texto-inicio {
-        width: 90%;
-        left: 40%;
+        width: 36rem;
+        padding: 5rem;
+        top: 55%;
+        left: 19rem;
+    }
+    
+    .ml6 {
+        font-size: 2em;
     }
 
+    .ml7 {
+        font-size: 1.4em;
+    }
+
+    .animated-box {
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+        top: 80px;
+        font-size: 2em;
+    }
+
+}
+    
+@media (max-width: 590px) {
+
+    .texto-inicio {
+        width: 33rem;
+        padding: 5rem;
+        top: 55%;
+        left: 14rem;
+    }
+    
     .ml6 {
         font-size: 1.8em;
     }
@@ -243,36 +272,43 @@ a {
         height: 70px;
         border-radius: 100px;
         top: 80px;
-        left: 50px;
+        left:42px;
         font-size: 2em;
+    }
+
+    .social-icons-container {
+        right: 12%;
+        top: 85%;
+        flex-direction: row;
+    }
+
+    .btn-home {
+        width: 12rem;
+        padding: 0.5rem;
+        font-size: 0.9em;
+        border-radius: 10px;
     }
 
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
 
     .texto-inicio {
-        width: 130%;
-        left: 52%;
+        width: 25rem;
+        padding: 5rem;
+        top: 55%;
+        left: 10rem;
     }
-
+    
     .ml6 {
         font-size: 1.5em;
     }
 
     .ml7 {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
-    .animated-box {
-        width: 60px;
-        height: 60px;
-        border-radius: 100px;
-        top: 10%;
-        left: 7%;
-        font-size: 1.8em;
-    }
-
+    
     .social-icons-container {
         right: 12%;
         top: 85%;
@@ -720,14 +756,9 @@ a {
 }
 
 @media (max-width: 500px) {
-    .cmd-window {
-        font-size: 0.8em;
-    }
-
-    .cmd-window .header .tab,
-    .icons-left,
-    .icons-right {
-        font-size: 0.7em;
+  
+    .cmd-window .icons-right {
+        display:none;
     }
 
     .input-arrow,

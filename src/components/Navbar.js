@@ -8,7 +8,7 @@ const TOGGLE_CLASSES = "text-sm font-medium flex items-center gap-2 px-3 md:pl-3
 
 const SliderToggle = ({ selected, setSelected }) => {
     return (
-        <div className="relative flex w-fit items-center rounded-full mt-4">
+        <div className="relative flex w-fit items-center rounded-full ">
             <button
                 className={`${TOGGLE_CLASSES} ${selected === "light" ? "text-slate-50" : "text-slate-400"}`}
                 onClick={() => { setSelected("light"); }}
@@ -45,7 +45,7 @@ const Navbar = ({ setTheme, theme }) => {
         <>
             {menuOpen && <div className="overlay"></div>}
             <div className={`navbar ${menuOpen ? "bg-slate-300 dark:bg-slate-800" : ""}`} id='navbar'>
-                <div className={`relative flex justify-between items-center w-full p-3 bg-slate-50 dark:bg-slate-800 ${menuOpen ? "flex-col items-center" : ""}`}>
+                <div className={`relative flex gap-3 justify-between items-center w-screen p-3 bg-slate-50 dark:bg-slate-800 ${menuOpen ? "flex-col items-center" : ""}`}>
                     {!menuOpen && (
                         <div className="lg:hidden absolute top-3 right-3 z-20">
                             <AnimatedHamburgerButton active={menuOpen} toggleMenu={toggleMenu} />
@@ -138,7 +138,7 @@ const VARIANTS = {
 
 const ShiftingDropDown = ({ menuOpen, setMenuOpen }) => {
     return (
-        <div className={`w-full ${menuOpen ? "flex flex-col drop-down items-center" : "hidden lg:flex lg:flex-row lg:justify-center lg:items-center"}`}>
+        <div className={`w-full pl-56 ${menuOpen ? "flex flex-col drop-down items-center" : "hidden lg:flex lg:flex-row lg:justify-center lg:items-center"}`}>
             <Tabs menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
     );

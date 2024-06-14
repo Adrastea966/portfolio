@@ -234,8 +234,7 @@ const AboutBlock = () => (
             </span>
 
             <span className="text-slate-400 span-about">
-                Conectando emociones. Ayudar a mis clientes a que cumplan sus deseos y objetivos. Trabajo principalmente con ReactJS, Tailwind CSS
-                y Framer Motion.
+            Conectando emociones para hacer realidad tus objetivos. Te ayudo a personalizar tu sitio web y potenciar tu marca.
             </span>
         </h2>
     </Block>

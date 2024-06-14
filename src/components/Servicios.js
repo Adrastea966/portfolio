@@ -41,14 +41,14 @@ const Servicios = () => {
       >
         <div className='product-card w-auto h-auto bg-transparent border border-slate-700 dark:border-slate-400 rounded-lg p-5 flex flex-col'>
           <div className='product-card-top flex flex-col items-center justify-center text-slate-700 dark:text-slate-300'>
-            <button className='btn-cambiar-plan' onClick={handleFirstCardChange}>Otra opción<LiaExchangeAltSolid /></button>
+            <button className='btn-cambiar-plan' onClick={handleFirstCardChange}>Click para otra opción<LiaExchangeAltSolid /></button>
             <motion.h2
               key={`firstCardPrice-${firstCardAnimationKey}`}
               variants={itemVariants}
               initial="hidden"
               animate="visible"
             >
-              {firstCardChanged ? "$60.000 ARS" : "$80.000 ARS"}
+              {firstCardChanged ? "$140.000 ARS" : "$165.000 ARS"}
             </motion.h2>
             <h3>Ideal para pequeñas empresas</h3>
           </div>
@@ -62,13 +62,12 @@ const Servicios = () => {
               <TiTick />One Page
             </motion.span>
             <motion.span
-              key={`firstCardSpan2-${firstCardAnimationKey}`}
               className='flex items-center gap-1 p-1'
               variants={itemVariants}
               initial="hidden"
               animate="visible"
             >
-              <TiTick />{firstCardChanged ? "Diseño plantilla" : "Diseño personalizado"}
+              <TiTick />Diseño web
             </motion.span>
             <motion.span
               className='flex items-center gap-1 p-1'
@@ -100,7 +99,7 @@ const Servicios = () => {
               initial="hidden"
               animate="visible"
             >
-              <TiTick />Integración de redes sociales
+              <TiTick />Alojamiento web
             </motion.span>
             <motion.span
               className='flex items-center gap-1 p-1'
@@ -108,26 +107,17 @@ const Servicios = () => {
               initial="hidden"
               animate="visible"
             >
-              <TiTick />Formulario de contacto
+              <TiTick />Certificado SSL
             </motion.span>
             <motion.span
-              key={`firstCardSpan8-${firstCardAnimationKey}`}
               className='flex items-center gap-1 p-1'
               variants={itemVariants}
               initial="hidden"
               animate="visible"
             >
-              <TiTick />{firstCardChanged ? "Alojamiento web" : "Alojamiento web (opcional)"}
+              <TiTick />Soporte
             </motion.span>
-            <motion.span
-              key={`firstCardSpan9-${firstCardAnimationKey}`}
-              className='flex items-center gap-1 p-1'
-              variants={itemVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              <TiTick />{firstCardChanged ? "Certificado SSL" : "Certificado SSL (opcional)"}
-            </motion.span>
+           
           </div>
           <div className='product-card-bottom'>
             <motion.button
@@ -142,7 +132,7 @@ const Servicios = () => {
 
         <div className='product-card w-auto h-auto bg-transparent border border-slate-700 dark:border-slate-400 rounded-lg p-5 flex flex-col'>
           <div className='product-card-top flex flex-col items-center justify-center text-slate-700 dark:text-slate-300'>
-            <button className='btn-cambiar-plan' onClick={handleSecondCardChange}>Otra opción<LiaExchangeAltSolid /></button>
+            <button className='btn-cambiar-plan' onClick={handleSecondCardChange}>Click para otra opción<LiaExchangeAltSolid /></button>
             <motion.h2
               key={`secondCardPrice-${secondCardAnimationKey}`}
               variants={itemVariants}
