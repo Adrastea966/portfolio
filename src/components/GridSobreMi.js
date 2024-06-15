@@ -83,7 +83,7 @@ const Block = ({ className, ...rest }) => {
                 damping: 50,
             }}
             className={twMerge(
-                "col-span-4 rounded-lg border border-slate-400 bg-slate-300 dark:bg-slate-700 p-2",
+                "col-span-4 rounded-lg border border-indigo-200 bg-indigo-50 dark:bg-transparent p-2",
                 className
             )}
             {...rest}
@@ -125,99 +125,99 @@ const SocialsBlock = () => (
         <div className="grid grid-cols-3 gap-2 ">
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     HTML5 <AiOutlineHtml5 />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     CSS3 <TbBrandCss3 />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     JavaScript <IoLogoJavascript />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     ReactJS <GrReactjs />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     Framer<FiFramer />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     TailwindCSS <BiLogoTailwindCss />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     Figma <FaFigma />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     Boostrap <RiBootstrapLine />
                 </a>
             </Block>
             <Block
                 whileHover={{ scale: 1.1 }}
-                className="bg-slate-400 dark:bg-slate-600 col-span-1 h-8 p-1"
+                className="bg-indigo-300 dark:bg-indigo-300 col-span-1 h-8 p-1"
             >
                 <a
                     href="#"
-                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 gap-2"
+                    className="flex justify-center items-center text-sm etiquetas-herramientas text-slate-50 dark:text-slate-700 gap-2"
                 >
                     AnimeJS
                 </a>

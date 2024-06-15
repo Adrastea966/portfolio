@@ -47,7 +47,7 @@ const BouncyCardsFeatures = () => {
             <span className="letters">Mis últimos proyectos</span>
           </span>
         </h1>
-        <button className="btn-arrow">Ver todos <FiArrowRight /> </button>
+        <button className="btn-arrow"> <a href='https://github.com/Adrastea966' target='_blank'>Ver todos <FiArrowRight /></a></button>
       </div>
 
       <motion.div
@@ -60,11 +60,11 @@ const BouncyCardsFeatures = () => {
           <div className="card-top">
             <h2 className="font-semibold text-slate-700 dark:text-slate-50">Llueve con sol</h2>
             <div className="card-top-items">
-              <a href="#">
+              <a href="https://github.com/Adrastea966/llueve-con-sol" target='_blank'>
                 <FiGithub />
                 <span className="tooltip">Ver código</span>
               </a>
-              <a href="#"> <BsArrowUpRightSquare />
+              <a href="https://llueve-con-sol.vercel.app/" target='_blank'> <BsArrowUpRightSquare />
               <span className="tooltip">Ver sitio</span>
               </a>
             </div>
@@ -78,11 +78,11 @@ const BouncyCardsFeatures = () => {
           <div className="card-top">
             <h2 className="font-semibold text-slate-700 dark:text-slate-50">Domo</h2>
             <div className="card-top-items">
-              <a href="#">
+              <a href="https://github.com/Adrastea966/domo" target='_blank'>
                 <FiGithub />
                 <span className="tooltip">Ver código</span>
               </a>
-              <a href="#"> <BsArrowUpRightSquare />
+              <a href="https://domo-proyect.vercel.app/" target='_blank'> <BsArrowUpRightSquare />
                 <span className="tooltip">Ver Sitio</span>
               </a>
             </div>
@@ -96,11 +96,11 @@ const BouncyCardsFeatures = () => {
           <div className="card-top">
             <h2 className="font-semibold text-slate-700 dark:text-slate-50">Adrastea</h2>
             <div className="card-top-items">
-              <a href="#">
+              <a href="https://github.com/Adrastea966/Adrastea" target='_blank'>
                 <FiGithub />
                 <span className="tooltip">Ver código</span>
               </a>
-              <a href="#"> <BsArrowUpRightSquare />
+              <a href="https://adrastea-psi.vercel.app/" target='_blank'> <BsArrowUpRightSquare />
                 <span className="tooltip">Ver Sitio</span>
               </a>
             </div>
@@ -114,11 +114,11 @@ const BouncyCardsFeatures = () => {
           <div className="card-top">
             <h2 className="font-semibold text-slate-700 dark:text-slate-50">FiberFiber</h2>
             <div className="card-top-items">
-              <a href="#">
+              <a href="https://github.com/Adrastea966/Fiber-Plus" target='_blank'>
                 <FiGithub />
                 <span className="tooltip">Ver código</span>
               </a>
-              <a href="#"> <BsArrowUpRightSquare />
+              <a href="https://pagina-de-ejemplo-cooperativa.netlify.app/" target='_blank'> <BsArrowUpRightSquare />
                 <span className="tooltip">Ver Sitio</span>
               </a>
             </div>
@@ -136,7 +136,7 @@ const BouncyCardsFeatures = () => {
 const BounceCard = ({ className, children, variants }) => {
   return (
     <motion.div
-      className={`group relative min-h-[300px] cursor-pointer  border border-slate-400 rounded-2xl bg-slate-50 dark:bg-slate-700 p-5 ${className}`}
+      className={`group relative min-h-[300px] cursor-pointer  border border-indigo-200 rounded-2xl bg-indigo-50 dark:bg-transparent p-5 ${className}`}
       variants={variants}
     >
       {children}

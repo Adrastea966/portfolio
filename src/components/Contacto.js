@@ -19,23 +19,27 @@ const Contacto = () => {
   const [isNameSubmitted, setIsNameSubmitted] = useState(false);
   const [description, setDescription] = useState('');
   const [isDescriptionSubmitted, setIsDescriptionSubmitted] = useState(false);
+  const [showEnterMessage, setShowEnterMessage] = useState(false);
   const cmdWindowRef = useRef(null);
 
   const handleEmailSubmit = (e) => {
     if (e.key === 'Enter') {
       setIsEmailSubmitted(true);
+      setShowEnterMessage(false);
     }
   };
 
   const handleNameSubmit = (e) => {
     if (e.key === 'Enter') {
       setIsNameSubmitted(true);
+      setShowEnterMessage(false);
     }
   };
 
   const handleDescriptionSubmit = (e) => {
     if (e.key === 'Enter') {
       setIsDescriptionSubmitted(true);
+      setShowEnterMessage(false);
     }
   };
 
@@ -72,32 +76,32 @@ const Contacto = () => {
     document.addEventListener('mouseup', handleMouseUp);
   };
 
+  const handleInputChange = (e, setValue) => {
+    setValue(e.target.value);
+    setShowEnterMessage(e.target.value.length > 0);
+  };
+
   return (
     <div className='contacto contenedor' id='contacto'>
       <div className="cmd-window bg-slate-200 dark:bg-slate-700" ref={cmdWindowRef} style={{ position: 'absolute' }}>
-
         <div className='header bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600' onMouseDown={handleMouseDown}>
-
           <div className='header-top'>
             <div className='tab bg-slate-200 dark:bg-slate-700'>
               <span><PiTerminalWindow /></span>
               <h3>contact@elydevelopsit</h3>
               <span className='icon-close'><IoIosClose /></span>
             </div>
-
             <div className='icons-left'>
               <span className='icon-add'><IoIosAdd /></span>
               <span className='icon-divider text-slate-400 dark:text-slate-500'><RxDividerVertical /></span>
               <span className='icon-down'><FaChevronDown /></span>
             </div>
           </div>
-
           <div className='icons-right'>
             <span className='icon-minimize'><FaWindowMinimize /></span>
             <span className='icon-maxime'><FaRegWindowMaximize /></span>
             <span className='icon-close'><IoIosClose /></span>
           </div>
-
         </div>
 
         <div className='content'>
@@ -121,25 +125,27 @@ const Contacto = () => {
                     type='text'
                     className='input-field bg-slate-200 dark:bg-slate-700 text-indigo-700 dark:text-indigo-400'
                     value={description}
-                    onChange={(e) => setDescription(e.target.value)}
+                    onChange={(e) => handleInputChange(e, setDescription)}
                     onKeyDown={handleDescriptionSubmit}
                     placeholder='tu mensaje'
                   />
+                  {showEnterMessage && description.length > 0 && <span className='enter-message text-indigo-700 dark:text-indigo-400'>Presionar enter para continuar</span>}
                 </div>
               </div>
             ) : isEmailSubmitted ? (
               <div>
                 Perfecto! Y cómo es <span className='text-indigo-700 dark:text-indigo-400'>tu nombre?</span><br /><br />
                 <div className='content-input'>
-                  <span className='input-prompt text-slate-400'><FiArrowRight className='input-arrow text-indigo-700 dark:text-indigo-400'/><TbTilde className='input-tilde text-slate-700 dark:text-slate-50' />Ingesar nombre:</span>
+                  <span className='input-prompt text-slate-400'><FiArrowRight className='input-arrow text-indigo-700 dark:text-indigo-400'/><TbTilde className='input-tilde text-slate-700 dark:text-slate-50' />Ingresar nombre:</span>
                   <input
                     type='text'
                     className='input-field bg-slate-200 dark:bg-slate-700 text-indigo-700 dark:text-indigo-400'
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => handleInputChange(e, setName)}
                     onKeyDown={handleNameSubmit}
                     placeholder='tu nombre'
                   />
+                  {showEnterMessage && name.length > 0 && <span className='enter-message text-indigo-700 dark:text-indigo-400'>Presionar enter para continuar</span>}
                 </div>
               </div>
             ) : (
@@ -151,29 +157,19 @@ const Contacto = () => {
                     type='text'
                     className='input-field bg-slate-200 dark:bg-slate-700 text-indigo-700 dark:text-indigo-400'
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => handleInputChange(e, setEmail)}
                     onKeyDown={handleEmailSubmit}
                     placeholder='tu email'
                   />
+                  {showEnterMessage && email.length > 0 && <span className='enter-message text-indigo-700 dark:text-indigo-400'>Presionar enter para continuar</span>}
                 </div>
               </div>
             )}
           </div>
-          {isEmailSubmitted && !isNameSubmitted && (
-            <div className='email-confirmed text-slate-700 dark:text-slate-50'>
-              Email: {email} <FaCheck className='check-icon text-green-500' />
-            </div>
-          )}
-          {isNameSubmitted && !isDescriptionSubmitted && (
-            <div className='email-confirmed text-slate-700 dark:text-slate-50'>
-              Nombre: {name} <FaCheck className='check-icon text-green-500' />
-            </div>
-          )}
         </div>
-
       </div>
     </div>
   );
-}
+};
 
 export default Contacto;

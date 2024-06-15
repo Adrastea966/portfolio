@@ -25,7 +25,7 @@ const useWindowSize = () => {
 
 const WaterDropGrid = () => {
   return (
-    <div className="relative flex justify-center bg-slate-20 p-10">
+    <div className="relative flex justify-center p-10">
       <DotGrid />
     </div>
   );
@@ -35,7 +35,7 @@ const DotGrid = () => {
   const { width } = useWindowSize();
 
   // Ajustar dimensiones de la grilla según el tamaño de la pantalla
-  const GRID_WIDTH = width <= 580 ? 10 : width <= 800 ? 15 : 30;
+  const GRID_WIDTH = width <= 580 ? 10 : width <= 800 ? 15 : 20;
   const GRID_HEIGHT = 20;
 
   const handleDotClick = (e) => {
@@ -67,12 +67,12 @@ const DotGrid = () => {
     for (let j = 0; j < GRID_HEIGHT; j++) {
       dots.push(
         <div
-          className="group cursor-crosshair rounded-full p-2 transition-colors hover:bg-slate-400 dark:hover:bg-slate-700"
+          className="group cursor-crosshair rounded-full p-2 transition-colors hover:bg-indigo-400 dark:hover:bg-indigo-300"
           data-index={index}
           key={`${i}-${j}`}
         >
           <div
-            className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-slate-50 dark:from-slate-800 to-slate-300 dark:to-slate-500 opacity-50 group-hover:from-slate-500 group-hover:to-slate-600"
+            className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-slate-200 dark:from-slate-600 to-indigo-200 dark:to-indigo-300 opacity-50 group-hover:from-slate-500 group-hover:to-slate-600"
             data-index={index}
           />
         </div>
@@ -86,7 +86,7 @@ const DotGrid = () => {
       onClick={handleDotClick}
       style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
       className={`grid w-fit ${
-        width <= 580 ? 'ml-10' : width <= 800 ? 'ml-10' : ''
+        width <= 580 ? 'ml-10' : width <= 800 ? 'ml-10' : 'ml-60'
       }`}
     >
       {dots}

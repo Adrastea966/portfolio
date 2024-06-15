@@ -64,12 +64,12 @@ const Home = ({ theme }) => {
     <div className={`home ${theme === 'dark' ? 'dark-mode' : ''}`} id='home'>
       <WaterDropGrid />
       <div className={`texto-inicio ${theme === 'dark' ? 'dark-mode' : ''}`}>
-        <h1 className="ml6">
+        <h1 className="ml6 text-slate-500 dark:text-slate-400">
           <span className="text-wrapper">
             <span className="letters">De ideas a experiencias digitales. Diseño y desarrollo de sitios web</span>
           </span>
         </h1>
-        <h2 className="ml7">
+        <h2 className="ml7 text-slate-500 dark:text-slate-400">
           <span className="text-wrapper">
             <span className="letters">Trabajemos juntos!</span>
           </span>
@@ -77,7 +77,7 @@ const Home = ({ theme }) => {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="btn-home flex gap-2 items-center whitespace-nowrap rounded-lg bg-slate-600 px-10 py-2 font-medium text-white shadow-xl transition-colors hover:bg-slate-700"
+          className="btn-home flex gap-2 items-center whitespace-nowrap rounded-lg  px-10 py-2 font-medium text-white shadow-xl transition-colors bg-indigo-500 hover:bg-indigo-600"
           href="https://wa.me/541135005100"
           target="_blank"
           rel="noopener noreferrer"
@@ -105,22 +105,22 @@ const Home = ({ theme }) => {
         initial="hidden"
         animate="visible"
       >
-        <motion.div className="icon instagram bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+        <motion.div className="icon instagram bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <AiOutlineInstagram />
           </a>
         </motion.div>
-        <motion.div className="icon whatsapp bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+        <motion.div className="icon whatsapp bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
           <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
             <AiOutlineWhatsApp />
           </a>
         </motion.div>
-        <motion.div className="icon github bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+        <motion.div className="icon github bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
           <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
             <AiOutlineGithub />
           </a>
         </motion.div>
-        <motion.div className="icon email bg-slate-300 hover:bg-slate-300 text-slate-700 dark:text-slate-50 dark:bg-slate-600 dark:hover:bg-slate-700" variants={item}>
+        <motion.div className="icon email bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
           <a href="mailto:elianamaiu@yahoo.com.ar">
             <AiOutlineMail />
           </a>
