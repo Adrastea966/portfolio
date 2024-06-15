@@ -86,6 +86,29 @@ const Servicios = () => {
     { id: 11, text: 'Soporte' }
   ];
 
+  const generateWhatsAppLink = (card, option) => {
+    let message = "";
+    switch(card) {
+      case 1:
+        message = `Hola! quiero una One Page con el plan ${option === 1 ? "Premium" : "Business"}`;
+        break;
+      case 2:
+        message = `Hola! quiero una página multiseccion con el plan ${option === 1 ? "Premium" : "Business"}`;
+        break;
+      case 3:
+        message = `Hola! quiero un ecommerce con el plan ${option === 1 ? "Premium" : "Business"}`;
+        break;
+      default:
+        message = "Hola!";
+    }
+    return `https://wa.me/5491135005100?text=${encodeURIComponent(message)}`;
+  };
+
+  const handleContractClick = (card, option) => {
+    const link = generateWhatsAppLink(card, option);
+    window.open(link, "_blank");
+  };
+
   return (
     <div className='servicios contenedor' id='servicios'>
       <motion.div
@@ -179,6 +202,7 @@ const Servicios = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="whitespace-nowrap rounded-lg bg-indigo-500 px-10 py-2 font-medium text-white shadow-xl transition-colors hover:bg-indigo-600 flex gap-2 items-center"
+                  onClick={() => handleContractClick(1, firstCardChanged ? 2 : 1)}
                 >
                   Contratar
                 </motion.button>
@@ -239,6 +263,7 @@ const Servicios = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="whitespace-nowrap rounded-lg bg-indigo-500 px-10 py-2 font-medium text-white shadow-xl transition-colors hover:bg-indigo-600 flex gap-2 items-center"
+                  onClick={() => handleContractClick(3, thirdCardChanged ? 2 : 1)}
                 >
                   Contratar
                 </motion.button>
@@ -299,6 +324,7 @@ const Servicios = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="whitespace-nowrap rounded-lg bg-indigo-500 px-10 py-2 font-medium text-white shadow-xl transition-colors hover:bg-indigo-600 flex gap-2 items-center"
+                  onClick={() => handleContractClick(2, secondCardChanged ? 2 : 1)}
                 >
                   Contratar
                 </motion.button>
@@ -315,3 +341,4 @@ const Servicios = () => {
 };
 
 export default Servicios;
+

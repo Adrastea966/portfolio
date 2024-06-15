@@ -111,12 +111,12 @@ const Home = ({ theme }) => {
           </a>
         </motion.div>
         <motion.div className="icon whatsapp bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
-          <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/541135005100" target="_blank" rel="noopener noreferrer">
             <AiOutlineWhatsApp />
           </a>
         </motion.div>
         <motion.div className="icon github bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
-          <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Adrastea966" target="_blank" rel="noopener noreferrer">
             <AiOutlineGithub />
           </a>
         </motion.div>
