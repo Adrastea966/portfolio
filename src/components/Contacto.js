@@ -88,7 +88,7 @@ const Contacto = () => {
           <div className='header-top'>
             <div className='tab bg-slate-200 dark:bg-slate-700'>
               <span><PiTerminalWindow /></span>
-              <h3>contact@elydevelopsit</h3>
+              <h3>contacto@elydevelopsit.com</h3>
               <span className='icon-close'><IoIosClose /></span>
             </div>
             <div className='icons-left'>
