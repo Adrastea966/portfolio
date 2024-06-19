@@ -53,7 +53,7 @@ const Contacto = () => {
   };
 
   const handleSubmit = () => {
-    const mailtoLink = `mailto:elianamaiu@yahoo.com.ar?subject=Nombre: ${name} Correo: ${email}&body=${description}`;
+    const mailtoLink = `mailto:contacto@elydevelopsit.com?subject=Nombre: ${name} Correo: ${email}&body=${description}`;
     window.location.href = mailtoLink;
   };
 

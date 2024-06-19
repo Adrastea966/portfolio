@@ -121,7 +121,7 @@ const Home = ({ theme }) => {
           </a>
         </motion.div>
         <motion.div className="icon email bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
-          <a href="mailto:elianamaiu@yahoo.com.ar">
+          <a href="mailto:contacto@elydevelopsit.com">
             <AiOutlineMail />
           </a>
         </motion.div>

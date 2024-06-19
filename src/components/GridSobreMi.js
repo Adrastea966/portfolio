@@ -108,7 +108,7 @@ const HeaderBlock = () => (
             </span>
         </h1>
 
-        <button className="btn-cv"><a href="CV.pdf" download>Descargar cv</a><IoMdDownload /></button>
+        <button className="btn-cv"> <a href="/CV.pdf" download>Descargar CV</a><IoMdDownload /></button>
     </Block>
 );
 
