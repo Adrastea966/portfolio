@@ -46,8 +46,7 @@ const Servicios = () => {
     { id: 6, text: 'Email gratis' },
     { id: 7, text: 'Dominio gratis (1er año)' },
     { id: 8, text: 'Protección de privacidad del dominio' },
-    { id: 9, text: 'Acceso SSH' },
-    { id: 10, text: 'Certificado SSL' },
+    { id: 10, text: 'Certificado SSL (protección web)' },
     { id: 11, text: 'Mantenimiento web mensual' },
     { id: 12, text: 'Soporte' }
   ];
@@ -66,8 +65,7 @@ const Servicios = () => {
     { id: 5, text: 'Email gratis' },
     { id: 6, text: 'Dominio gratis (1er año)' },
     { id: 7, text: 'Protección de privacidad del dominio' },
-    { id: 8, text: 'Acceso SSH' },
-    { id: 9, text: 'Certificado SSL' },
+    { id: 9, text: 'Certificado SSL (protección web)' },
     { id: 10, text: 'Mantenimiento web mensual' },
     { id: 11, text: 'Soporte' }
   ];
@@ -80,8 +78,7 @@ const Servicios = () => {
     { id: 5, text: 'Email gratis' },
     { id: 6, text: 'Dominio gratis (1er año)' },
     { id: 7, text: 'Protección de privacidad del dominio' },
-    { id: 8, text: 'Acceso SSH' },
-    { id: 9, text: 'Certificado SSL' },
+    { id: 9, text: 'Certificado SSL (protección web)' },
     { id: 10, text: 'Mantenimiento web mensual' },
     { id: 11, text: 'Soporte' }
   ];
@@ -90,16 +87,16 @@ const Servicios = () => {
     let message = "";
     switch(card) {
       case 1:
-        message = `Hola! quiero una One Page con el plan ${option === 1 ? "Premium" : "Business"}`;
+        message = `¡Hola! Me gustaría tener una One Page con el plan ${option === 1 ? "Premium" : "Business"}`;
         break;
       case 2:
-        message = `Hola! quiero una página multiseccion con el plan ${option === 1 ? "Premium" : "Business"}`;
+        message = `¡Hola! Me gustaría tener una Página Multiseccion con el plan ${option === 1 ? "Premium" : "Business"}`;
         break;
       case 3:
-        message = `Hola! quiero un ecommerce con el plan ${option === 1 ? "Premium" : "Business"}`;
+        message = `¡Hola! Me gustaría tener un Ecommerce, tienda online, con el plan ${option === 1 ? "Premium" : "Business"}`;
         break;
       default:
-        message = "Hola!";
+        message = "¡Hola!";
     }
     return `https://wa.me/5491135005100?text=${encodeURIComponent(message)}`;
   };
@@ -124,7 +121,7 @@ const Servicios = () => {
             <div className='info-producto hover-plan'>
               <div className='valor'>
                 <h3>Valor del plan <IoIosInformationCircleOutline /> </h3>
-                <span className="tooltip2">Todos estos planes tienen un valor especificado para un período de 1 año. Si 
+                <span className="tooltip2">Todos estos planes incluyen un alojamiento web en Hostinguer y tienen un valor especificado para un período de 1 año. Si 
                   desea contratar por 2 o 4 años, por favor indíquelo, ya que se aplicará un nuevo valor.</span>
               </div>
             </div>
@@ -140,8 +137,8 @@ const Servicios = () => {
             <div className='info-producto hover-mantenimiento'>
               <div className='valor'>
                 <h3>Mantenimiento<IoIosInformationCircleOutline /> </h3>
-                <span className="tooltip2">El mantenimiento web tiene el valor de $5000 mensuales. Todos los planes incluyen ese valor 
-                  por 1 año. Pasado ese año, el mantenimiento se cobrará mensualmente</span>
+                <span className="tooltip2">El mantenimiento web tiene el valor de $8.000 mensuales, todos los planes que incluyan o no alojamiento web tienen ese valor.
+                  Se puede incluir el precio por 1 año en el plan, o se cobra de manera mensual. </span>
               </div>
             </div>
           </div>
@@ -159,7 +156,7 @@ const Servicios = () => {
                 >
                   <div className='h2'>
                     <span>{firstCardChanged ? "Opción 2" : "Opción 1"}</span>
-                    <span>{firstCardChanged ? "$165.000 ARS" : "$140.000 ARS"}</span>
+                    <span>{firstCardChanged ? "$100.000 ARS" : "$74.800 ARS"}</span>
                   </div>
                 </motion.div>
                 <h3>Ideal para pequeñas empresas</h3>
@@ -220,7 +217,7 @@ const Servicios = () => {
                 >
                   <div className='h2'>
                     <span>{thirdCardChanged ? "Opción 2" : "Opción 1"}</span>
-                    <span>{thirdCardChanged ? "$170.000 ARS" : "$145.000 ARS"}</span>
+                    <span>{thirdCardChanged ? "$130.000 ARS" : "$85.000 ARS"}</span>
                   </div>
                 </motion.div>
                 <h3>Ideal para emprendedores</h3>
@@ -281,7 +278,7 @@ const Servicios = () => {
                 >
                   <div className='h2'>
                     <span>{secondCardChanged ? "Opción 2" : "Opción 1"}</span>
-                    <span>{secondCardChanged ? "$174.000 ARS" : "$150.000 ARS"}</span>
+                    <span>{secondCardChanged ? "$150.000 ARS" : "$90.000 ARS"}</span>
                   </div>
                 </motion.div>
                 <h3>Ideal para empresas y cooperativas</h3>
