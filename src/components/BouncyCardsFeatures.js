@@ -94,18 +94,18 @@ const BouncyCardsFeatures = () => {
         </BounceCard>
         <BounceCard className="card" variants={cardVariants}>
           <div className="card-top">
-            <h2 className="font-semibold text-slate-700 dark:text-slate-50">Adrastea</h2>
+            <h2 className="font-semibold text-slate-700 dark:text-slate-50">El Galpon Verde</h2>
             <div className="card-top-items">
-              <a href="https://github.com/Adrastea966/Adrastea" target='_blank'>
+              <a href="#">
                 <FiGithub />
-                <span className="tooltip">Ver código</span>
+                <span className="tooltip">No disponible</span>
               </a>
-              <a href="https://adrastea-psi.vercel.app/" target='_blank'> <BsArrowUpRightSquare />
+              <a href="https://elgalponverde.com.ar/" target='_blank'> <BsArrowUpRightSquare />
                 <span className="tooltip">Ver Sitio</span>
               </a>
             </div>
           </div>
-          <h3>Tienda online de vestidos para eventos.</h3>
+          <h3>Tienda online de productos alimenticios saludables.</h3>
           <div className="img-card-3 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
 
           </div>
