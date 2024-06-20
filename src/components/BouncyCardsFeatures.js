@@ -65,14 +65,14 @@ const BouncyCardsFeatures = () => {
                 <span className="tooltip">Ver código</span>
               </a>
               <a href="https://llueve-con-sol.vercel.app/" target='_blank'> <BsArrowUpRightSquare />
-              <span className="tooltip">Ver sitio</span>
+                <span className="tooltip">Ver sitio</span>
               </a>
             </div>
           </div>
           <h3>Sitio web para empresa que brinda servicios de diseño.</h3>
-          <div className="img-card-1 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
-
-          </div>
+          <a href="https://llueve-con-sol.vercel.app/" target="_blank">
+            <div className="img-card-1 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"></div>
+          </a>
         </BounceCard>
         <BounceCard className="card" variants={cardVariants}>
           <div className="card-top">
@@ -88,9 +88,9 @@ const BouncyCardsFeatures = () => {
             </div>
           </div>
           <h3>Sitio web para empresa que brinda soluciones de software.</h3>
-          <div className="img-card-2 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
-
-          </div>
+          <a href="https://domo-proyect.vercel.app/" target="_blank">
+            <div className="img-card-2 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"></div>
+          </a>
         </BounceCard>
         <BounceCard className="card" variants={cardVariants}>
           <div className="card-top">
@@ -106,9 +106,9 @@ const BouncyCardsFeatures = () => {
             </div>
           </div>
           <h3>Tienda online de productos alimenticios saludables.</h3>
-          <div className="img-card-3 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
-
-          </div>
+          <a href="https://elgalponverde.com.ar/" target="_blank">
+            <div className="img-card-3 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"></div>
+          </a>
         </BounceCard>
         <BounceCard className="card" variants={cardVariants}>
           <div className="card-top">
@@ -124,9 +124,9 @@ const BouncyCardsFeatures = () => {
             </div>
           </div>
           <h3>Sitio web plantilla para grandes cooperativas.</h3>
-          <div className="img-card-4 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl bg-gradient-to-br from-pink-400 to-red-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
-
-          </div>
+          <a href="https://pagina-de-ejemplo-cooperativa.netlify.app/" target="_blank">
+            <div className="img-card-4 absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-2xl bg-gradient-to-br from-pink-400 to-red-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"></div>
+          </a>
         </BounceCard>
       </motion.div>
     </section>

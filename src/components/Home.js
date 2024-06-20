@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import anime from 'animejs';
 import WaterDropGrid from './WaterDropGrid';
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { AiOutlineInstagram, AiOutlineGithub, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineWhatsApp, AiOutlineInstagram, AiOutlineGithub, AiOutlineMail } from "react-icons/ai";
 import { motion } from 'framer-motion';
 import '../App.css';
 
@@ -86,7 +85,7 @@ const Home = ({ theme }) => {
         </motion.a>
       </div>
       <motion.div
-        className={`animated-box ${theme === 'dark' ? 'dark-mode' : ''}`}
+        className="animated-box"
         key={emojiIndex} 
         initial={{ scale: 0 }}
         animate={{ rotate: 360, scale: 1 }}
@@ -106,8 +105,9 @@ const Home = ({ theme }) => {
         animate="visible"
       >
         <motion.div className="icon instagram bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>
-          <a href="#" rel="noopener noreferrer"  title="en construcción">
+          <a href="#">
             <AiOutlineInstagram />
+            <span className="tooltip-instagram">🛠️ En construcción</span>
           </a>
         </motion.div>
         <motion.div className="icon whatsapp bg-indigo-100 hover:bg-indigo-200 text-slate-700 hover:text-slate-50 dark:bg-transparent border border-indigo-200 dark:text-slate-50 dark:hover:bg-indigo-200 dark:hover:text-slate-700" variants={item}>

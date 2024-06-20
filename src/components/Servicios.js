@@ -39,7 +39,13 @@ const Servicios = () => {
   };
 
   const firstCardItems = [
-    { id: 1, text: 'One Page' },
+    {
+      id: 1,
+      text: 'One Page',
+      withIcon: true,
+      tooltipText: 'Presenta todo su contenido en una misma página web. Un ejemplo es el sitio web de Glovo',
+      tooltipLink: 'https://glovoapp.com'
+    },
     { id: 2, text: 'Diseño web plantilla' },
     { id: 3, text: 'Diseño adaptable' },
     { id: 5, text: 'Alojamiento web' },
@@ -58,7 +64,13 @@ const Servicios = () => {
   ];
 
   const secondCardItems = [
-    { id: 1, text: 'Sitio web multisección' },
+    {
+      id: 1,
+      text: 'Multi Page',
+      withIcon: true,
+      tooltipText: 'Página tradicional, contienen varias pestañas de información. Un ejemplo es el sitio web de Apple',
+      tooltipLink: 'https://apple.com'
+    },
     { id: 2, text: 'Diseño web plantilla' },
     { id: 3, text: 'Diseño adaptable' },
     { id: 4, text: 'Alojamiento web' },
@@ -85,7 +97,7 @@ const Servicios = () => {
 
   const generateWhatsAppLink = (card, option) => {
     let message = "";
-    switch(card) {
+    switch (card) {
       case 1:
         message = `¡Hola! Me gustaría tener una One Page con el plan ${option === 1 ? "Premium" : "Business"}`;
         break;
@@ -118,18 +130,28 @@ const Servicios = () => {
         <div className='contenedor-info-y-productos'>
 
           <div className='contenedor-info-productos'>
+            
+            <div className='info-producto hover-plan'>
+              <div className='valor'>
+                <h3>Alojamiento web <IoIosInformationCircleOutline /> </h3>
+                <span className="tooltip2">Todos los planes incluyen alojamiento web en Hostinger. Si ya posee su propio 
+                  alojamiento o servidor, también puedo diseñar y desarrollar sitios web personalizados desde cero y subirlos allí.
+                </span>
+              </div>
+            </div>
+
             <div className='info-producto hover-plan'>
               <div className='valor'>
                 <h3>Valor del plan <IoIosInformationCircleOutline /> </h3>
-                <span className="tooltip2">Todos estos planes incluyen un alojamiento web en Hostinguer y tienen un valor especificado para un período de 1 año. Si 
-                  desea contratar por 2 o 4 años, por favor indíquelo, ya que se aplicará un nuevo valor.</span>
+                <span className="tooltip2">Los precios incluyen el alojamiento web en Hostinger, mi diseño y asesoría.
+                  Los valores están especificados para un período de 1 año. Para contrataciones de 2 o 4 años, indíquemelo para ajustar el valor.</span>
               </div>
             </div>
 
             <div className='info-producto hover-web'>
               <div className='valor'>
                 <h3>Diseño web<IoIosInformationCircleOutline /> </h3>
-                <span className="tooltip2">Todos los planes incluyen diseño web adaptable a todos los dispositivos y diseños web plantilla. 
+                <span className="tooltip2">Todos los planes incluyen diseño web adaptable a todos los dispositivos y diseños web plantilla.
                   Si se requiere de un diseño personalizado, por favor, indíquelo, ya que se aplicará un nuevo valor.</span>
               </div>
             </div>
@@ -147,7 +169,7 @@ const Servicios = () => {
 
             <div className='product-card w-80 h-auto bg-transparent border border-slate-700 dark:border-slate-400 rounded-lg p-5 flex flex-col'>
               <div className='product-card-top flex flex-col items-center justify-center text-slate-700 dark:text-slate-300'>
-                <button className='btn-cambiar-plan text-indigo-500 dark:text-indigo-300' onClick={handleFirstCardChange}>Click para otra opción<LiaExchangeAltSolid /></button>
+                <button className='btn-cambiar-plan text-indigo-500 dark:text-indigo-300' onClick={handleFirstCardChange}>Clic para ver otra opción<LiaExchangeAltSolid /></button>
                 <motion.div
                   key={`firstCardPrice-${firstCardAnimationKey}`}
                   variants={itemVariants}
@@ -170,7 +192,17 @@ const Servicios = () => {
                     initial="hidden"
                     animate="visible"
                   >
-                    <TiTick className="text-indigo-500 dark:text-indigo-300 text-lg" />{item.text}
+                    <TiTick className="text-indigo-500 dark:text-indigo-300 text-lg" />
+                    {item.text}
+                    {item.withIcon && (
+                      <span className='tooltip' onClick={() => window.open(item.tooltipLink, "_blank")}>
+                        <IoIosInformationCircleOutline />
+                        <span className="tooltiptext">
+                          {item.tooltipText}
+                          <a href={item.tooltipLink} target="_blank" rel="noopener noreferrer" className="tooltip-link"> {item.tooltipLink}</a>
+                        </span>
+                      </span>
+                    )}
                   </motion.span>
                 ))}
                 <motion.span
@@ -208,7 +240,7 @@ const Servicios = () => {
 
             <div className='product-card w-80 h-auto bg-transparent border border-slate-700 dark:border-slate-400 rounded-lg p-5 flex flex-col'>
               <div className='product-card-top flex flex-col items-center justify-center text-slate-700 dark:text-slate-300'>
-                <button className='btn-cambiar-plan text-indigo-500 dark:text-indigo-300' onClick={handleThirdCardChange}>Click para otra opción<LiaExchangeAltSolid /></button>
+                <button className='btn-cambiar-plan text-indigo-500 dark:text-indigo-300' onClick={handleThirdCardChange}>Clic para ver otra opción<LiaExchangeAltSolid /></button>
                 <motion.div
                   key={`thirdCardPrice-${thirdCardAnimationKey}`}
                   variants={itemVariants}
@@ -217,7 +249,7 @@ const Servicios = () => {
                 >
                   <div className='h2'>
                     <span>{thirdCardChanged ? "Opción 2" : "Opción 1"}</span>
-                    <span>{thirdCardChanged ? "$130.000 ARS" : "$85.000 ARS"}</span>
+                    <span>{thirdCardChanged ? "$110.000 ARS" : "$80.000 ARS"}</span>
                   </div>
                 </motion.div>
                 <h3>Ideal para emprendedores</h3>
@@ -269,7 +301,7 @@ const Servicios = () => {
 
             <div className='product-card w-80 h-auto bg-transparent border border-slate-700 dark:border-slate-400 rounded-lg p-5 flex flex-col'>
               <div className='product-card-top flex flex-col items-center justify-center text-slate-700 dark:text-slate-300'>
-                <button className='btn-cambiar-plan text-indigo-500 dark:text-indigo-300' onClick={handleSecondCardChange}>Click para otra opción<LiaExchangeAltSolid /></button>
+                <button className='btn-cambiar-plan text-indigo-500 dark:text-indigo-300' onClick={handleSecondCardChange}>Clic para ver otra opción<LiaExchangeAltSolid /></button>
                 <motion.div
                   key={`secondCardPrice-${secondCardAnimationKey}`}
                   variants={itemVariants}
@@ -292,7 +324,17 @@ const Servicios = () => {
                     initial="hidden"
                     animate="visible"
                   >
-                    <TiTick className="text-indigo-500 dark:text-indigo-300 text-lg" />{item.text}
+                    <TiTick className="text-indigo-500 dark:text-indigo-300 text-lg" />
+                    {item.text}
+                    {item.withIcon && (
+                      <span className='tooltip' onClick={() => window.open(item.tooltipLink, "_blank")}>
+                        <IoIosInformationCircleOutline />
+                        <span className="tooltiptext">
+                          {item.tooltipText}
+                          <a href={item.tooltipLink} target="_blank" rel="noopener noreferrer" className="tooltip-link"> {item.tooltipLink}</a>
+                        </span>
+                      </span>
+                    )}
                   </motion.span>
                 ))}
                 <motion.span
