@@ -195,11 +195,11 @@ const Servicios = () => {
                     <TiTick className="text-indigo-500 dark:text-indigo-300 text-lg" />
                     {item.text}
                     {item.withIcon && (
-                      <span className='tooltip' onClick={() => window.open(item.tooltipLink, "_blank")}>
+                      <span className='tooltip'>
                         <IoIosInformationCircleOutline />
                         <span className="tooltiptext">
                           {item.tooltipText}
-                          <a href={item.tooltipLink} target="_blank" rel="noopener noreferrer" className="tooltip-link"> {item.tooltipLink}</a>
+                          <a href={item.tooltipLink} target='_blank' onClick={() => window.open(item.tooltipLink, "_blank")} rel="noopener noreferrer" className="tooltip-link"> {item.tooltipLink}</a>
                         </span>
                       </span>
                     )}
@@ -327,11 +327,11 @@ const Servicios = () => {
                     <TiTick className="text-indigo-500 dark:text-indigo-300 text-lg" />
                     {item.text}
                     {item.withIcon && (
-                      <span className='tooltip' onClick={() => window.open(item.tooltipLink, "_blank")}>
+                      <span className='tooltip'>
                         <IoIosInformationCircleOutline />
                         <span className="tooltiptext">
                           {item.tooltipText}
-                          <a href={item.tooltipLink} target="_blank" rel="noopener noreferrer" className="tooltip-link"> {item.tooltipLink}</a>
+                          <a href={item.tooltipLink} target='_blank' onClick={() => window.open(item.tooltipLink, "_blank")} rel="noopener noreferrer" className="tooltip-link"> {item.tooltipLink}</a>
                         </span>
                       </span>
                     )}

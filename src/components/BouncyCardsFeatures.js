@@ -44,7 +44,7 @@ const BouncyCardsFeatures = () => {
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
         <h1 className="ml11 max-w-lg text-3xl font-bold md:text-2xl">
           <span className="text-wrapper">
-            <span className="letters">Mis últimos proyectos</span>
+            <span className="letters">Mis proyectos</span>
           </span>
         </h1>
         <button className="btn-arrow"> <a href='https://github.com/Adrastea966' target='_blank'>Ver todos <FiArrowRight /></a></button>
