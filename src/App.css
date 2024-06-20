@@ -673,14 +673,6 @@ a {
     opacity: 1;
 }
 
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-    .product-card {
-        width: 100%;
-    }
-}
-
 /*Contacto*/
 .contacto {
     padding-top: 2rem;
