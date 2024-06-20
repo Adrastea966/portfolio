@@ -284,6 +284,11 @@ a {
         border-radius: 10px;
     }
 
+    .icon .tooltip-instagram {
+        bottom: 50px; 
+        left: 10px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -679,7 +684,6 @@ a {
 }
 
 .cmd-window {
-    font-family: 'Consolas', 'Courier New', monospace;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.183);
     width: 50rem;
@@ -794,7 +798,6 @@ a {
 .cmd-window .input-field {
     border: none;
     outline: none;
-    font-family: 'Consolas', 'Courier New', monospace;
     font-size: 1em;
     font-weight: 600;
 }
